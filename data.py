@@ -7,7 +7,7 @@ def main():
         df = pd.read_csv('D:/DesktopCopy/dataProject/bike/Accidents.csv')
         print(df)
     except:
-        print("An exception occurred")
+        print("An exception occurred!!!")
     
     return 0
 
