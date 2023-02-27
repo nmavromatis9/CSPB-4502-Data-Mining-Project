@@ -1,8 +1,10 @@
 import pandas as pd 
-import dask.dataframe as dd
 import datetime
 from scipy.stats import *
+import matplotlib.pyplot as plt
 
+#venv\Scripts\activate
+#Note for hdd use: open Data folder in vs code
 def main(): 
     print("hello World!")
     try:
@@ -54,6 +56,28 @@ def integrate():
     except:
         print("CSV output error")
         
+def graph():
+    df=pd.read_csv('C:/Users/shogu/Python_files/Data/Project/bikeData/bikeDataClean.csv')
+    arr1=df['Season']
+    arr2=df.groupby(['Season'],as_index=False).sum()
+    #print(arr2['Season'])
+    plt.bar(arr2["Season"], arr2["Number_of_Casualties"])
+    plt.show()
+    
+def stats():
+    df=pd.read_csv('C:/Users/shogu/Python_files/Data/Project/bikeData/bikeDataClean.csv')
+    df.drop(df[df['Gender']=='Other'].index, inplace=True)
+    contingency = pd.crosstab(df['Gender'], df['Severity'])
+    print(contingency)
+    c, p, dof, expected = chi2_contingency(contingency)
+    print("p=" , p)
+    #contingency2 = pd.crosstab(df['Light_conditions'], df['Number_of_Casualties'])
+    #c2, p2, dof2, expected2 = chi2_contingency(contingency2)
+    #print(contingency2)
+    #print("p2= ", p2)
+        
 if __name__ == "__main__":
     main()
-    preProcess()
+    #preProcess()
+    #graph()
+    stats()
