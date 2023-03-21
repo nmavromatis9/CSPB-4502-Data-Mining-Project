@@ -66,11 +66,13 @@ def graph():
     
 def stats():
     df=pd.read_csv('C:/Users/shogu/Python_files/Data/Project/bikeData/bikeDataClean.csv')
-    df.drop(df[df['Gender']=='Other'].index, inplace=True)
+   #df.drop(df[df['Gender']=='Other'].index, inplace=True)
     contingency = pd.crosstab(df['Gender'], df['Severity'])
     print(contingency)
     c, p, dof, expected = chi2_contingency(contingency)
     print("p=" , p)
+    print("EXPECTED= ", expected)
+    print("C= ", c)
     #contingency2 = pd.crosstab(df['Light_conditions'], df['Number_of_Casualties'])
     #c2, p2, dof2, expected2 = chi2_contingency(contingency2)
     #print(contingency2)
