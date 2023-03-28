@@ -17,7 +17,9 @@ The results were that 80% of all accident victims were male, and were more likel
 Prediction of conditions that associate with bike accidents and education of the general public are the main applications of the study. Bikers above 65 years should be very cautious biking, and perhaps refrain from biking in busy areas. Males should be aware they are more likely to be involved in an accident, although this may be due simply to a great majority of bikers being male. Bikers should avoid the roads during wet conditions, as they are more likely to result in fatalities. They should also avoid biking during late dark hours where visibility is reduced. Bikers armed with this knowledge may be able to avoid the potential for an accident by modifying their habits. Perhaps bicycle safety classes relaying this information could decrease the number of accidents. 
 
 # Video Demonstration Link:
+https://youtu.be/-0JYtM5xj3g
 
 # Paper Link:
+https://github.com/nmavromatis9/CSPB-4502-Data-Mining-Project/blob/main/01_NicolasMavromatis_BikeAccidentsinGreatBritain_Part4.pdf
 
 
